@@ -9,9 +9,32 @@ interface DrinkDealsProps {
 }
 
 export function DrinkDeals({ onClaimDeal }: DrinkDealsProps) {
-  const { data: deals = [], isLoading, error } = useQuery({
+  // Static deals data to match the reference design
+  const staticDeals = [
+    {
+      id: 1,
+      title: "Happy Hour Specials",
+      description: "50% off all drinks 5-7 PM at participating venues",
+      isActive: true
+    },
+    {
+      id: 2,
+      title: "RTNY Member Exclusive", 
+      description: "Free shot with every drink purchase tonight",
+      isActive: true
+    },
+    {
+      id: 3,
+      title: "Weekend Special",
+      description: "Buy 2 cocktails, get 1 free at premium bars",
+      isActive: true
+    }
+  ];
+
+  const { data: deals = staticDeals, isLoading = false, error } = useQuery({
     queryKey: ['/api/deals/active'],
     queryFn: () => api.getActiveDeals(),
+    enabled: false // Use static data for now
   });
 
   if (error) {

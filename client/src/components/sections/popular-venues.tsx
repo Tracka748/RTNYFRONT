@@ -23,9 +23,53 @@ const venueStyles = [
 ];
 
 export function PopularVenues() {
-  const { data: venues = [], isLoading, error } = useQuery({
+  // Static venue data matching the reference design
+  const staticVenues = [
+    {
+      id: 1,
+      name: "Electric Lounge",
+      location: "Downtown Rochester",
+      description: "Premier nightclub featuring top DJs and electronic music.",
+      capacity: 500,
+      imageUrl: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=300&fit=crop",
+      upcomingEvents: [
+        "Tonight: DJ Nightfall - House Music",
+        "Fri: Electronic Vibes Night", 
+        "Sat: Weekend Celebration"
+      ]
+    },
+    {
+      id: 2,
+      name: "Sky Rooftop Bar",
+      location: "East End District", 
+      description: "Upscale rooftop experience with city views and craft cocktails.",
+      capacity: 200,
+      imageUrl: "https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?w=400&h=300&fit=crop",
+      upcomingEvents: [
+        "Tonight: Sunset Sessions",
+        "Thu: Happy Hour Special",
+        "Fri: Live Jazz Night"
+      ]
+    },
+    {
+      id: 3,
+      name: "The Basement",
+      location: "Park Avenue",
+      description: "Underground venue known for live music and alternative crowds.",
+      capacity: 300,
+      imageUrl: "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=400&h=300&fit=crop",
+      upcomingEvents: [
+        "Tonight: Local Band Showcase",
+        "Fri: Indie Rock Night",
+        "Sat: Underground Sessions"
+      ]
+    }
+  ];
+
+  const { data: venues = staticVenues, isLoading = false, error } = useQuery({
     queryKey: ['/api/venues/popular'],
     queryFn: () => api.getPopularVenues(),
+    enabled: false
   });
 
   if (error) {

@@ -9,9 +9,47 @@ interface EventsTonightProps {
 }
 
 export function EventsTonight({ onBuyTicket }: EventsTonightProps) {
-  const { data: eventsTonight = [], isLoading, error } = useQuery({
+  // Static data matching the reference design
+  const staticEvents = [
+    {
+      id: 1,
+      name: "The Weeknd - After Hours Tour",
+      venueName: "Madison Square Garden",
+      dateTime: "2024-03-15T20:00:00",
+      price: "89.00",
+      originalPrice: "299.00",
+      category: "Concert",
+      imageUrl: "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?w=400&h=300&fit=crop",
+      isFeatured: true
+    },
+    {
+      id: 2,
+      name: "NY Knicks vs Lakers",
+      venueName: "Madison Square Garden", 
+      dateTime: "2024-03-22T19:30:00",
+      price: "125.00",
+      originalPrice: "500.00",
+      category: "Sports",
+      imageUrl: "https://images.unsplash.com/photo-1546519638-68e109498ffc?w=400&h=300&fit=crop",
+      isFeatured: true
+    },
+    {
+      id: 3,
+      name: "Hamilton",
+      venueName: "Richard Rodgers Theatre",
+      dateTime: "2024-03-20T20:00:00",
+      price: "159.00",
+      originalPrice: "849.00",
+      category: "Theater",
+      imageUrl: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=300&fit=crop",
+      isFeatured: true
+    }
+  ];
+
+  const { data: eventsTonight = staticEvents, isLoading = false, error } = useQuery({
     queryKey: ['/api/events/tonight'],
     queryFn: () => api.getEventsTonight(),
+    enabled: false
   });
 
   if (error) {
