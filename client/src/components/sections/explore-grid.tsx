@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { CategoryItem } from "@/types";
+import { Crown, Zap, Wine, Users, MapPin, Calendar } from "lucide-react";
 
 interface ExploreGridProps {
   onCategoryClick?: (categoryId: string) => void;
@@ -9,42 +10,42 @@ const categories: CategoryItem[] = [
   {
     id: "vip-room",
     name: "VIP Room",
-    icon: "👑",
+    icon: "Crown",
     description: "Exclusive access",
     gradient: "from-orange-500 to-yellow-500"
   },
   {
     id: "events-tonight",
     name: "Events Tonight",
-    icon: "⚡",
+    icon: "Zap",
     description: "Happening now",
     gradient: "from-pink-500 to-red-500"
   },
   {
     id: "drink-deals",
     name: "Drink Deals",
-    icon: "🍸",
+    icon: "Wine",
     description: "Special prices",
     gradient: "from-green-500 to-emerald-500"
   },
   {
     id: "guest-list",
     name: "Guest List",
-    icon: "👥",
+    icon: "Users",
     description: "Skip the line",
     gradient: "from-purple-500 to-pink-500"
   },
   {
     id: "venues",
     name: "Venues",
-    icon: "📍",
+    icon: "MapPin",
     description: "Find your spot",
     gradient: "from-blue-500 to-indigo-500"
   },
   {
     id: "calendar",
     name: "Calendar",
-    icon: "📅",
+    icon: "Calendar",
     description: "Plan your nights",
     gradient: "from-cyan-500 to-blue-500"
   }
@@ -67,7 +68,12 @@ export function ExploreGrid({ onCategoryClick }: ExploreGridProps) {
                 onClick={() => onCategoryClick?.(category.id)}
                 className={`bg-gradient-to-br ${category.gradient} p-4 rounded-2xl hover:shadow-xl hover:scale-105 transition-all duration-300 glow-hover group h-16 w-28 mb-3 flex items-center justify-center`}
               >
-                <div className="text-2xl group-hover:animate-pulse text-white">{category.icon}</div>
+                {category.icon === "Crown" && <Crown className="h-6 w-6 text-white group-hover:animate-pulse" />}
+                {category.icon === "Zap" && <Zap className="h-6 w-6 text-white group-hover:animate-pulse" />}
+                {category.icon === "Wine" && <Wine className="h-6 w-6 text-white group-hover:animate-pulse" />}
+                {category.icon === "Users" && <Users className="h-6 w-6 text-white group-hover:animate-pulse" />}
+                {category.icon === "MapPin" && <MapPin className="h-6 w-6 text-white group-hover:animate-pulse" />}
+                {category.icon === "Calendar" && <Calendar className="h-6 w-6 text-white group-hover:animate-pulse" />}
               </Button>
               <div className="text-center">
                 <h3 className="font-bold text-white text-sm mb-1">{category.name}</h3>

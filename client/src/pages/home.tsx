@@ -8,6 +8,7 @@ import { ExploreGrid } from "@/components/sections/explore-grid";
 import { HotTickets } from "@/components/sections/hot-tickets";
 import { EventsTonight } from "@/components/sections/events-tonight";
 import { DrinkDeals } from "@/components/sections/drink-deals";
+import { FeaturedEvents } from "@/components/sections/featured-events";
 import { PopularVenues } from "@/components/sections/popular-venues";
 import { CTASection } from "@/components/sections/cta-section";
 import { api } from "@/lib/api";
@@ -116,6 +117,7 @@ export default function Home() {
         <HotTickets onBuyTicket={handleBuyTicket} />
         <EventsTonight onBuyTicket={handleBuyTicket} />
         <DrinkDeals onClaimDeal={handleClaimDeal} />
+        <FeaturedEvents onBuyTicket={handleBuyTicket} />
         <PopularVenues />
         <CTASection onSignUp={handleSignUp} onBrowseEvents={handleBrowseEvents} />
       </main>
