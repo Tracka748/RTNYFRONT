@@ -26,21 +26,21 @@ export function Hero({ onSearch }: HeroProps) {
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
         {/* Main Logo */}
-        <div className="mb-6">
-          <h1 className="text-6xl md:text-8xl font-bold mb-4 animate-glow">
+        <div className="mb-8">
+          <h1 className="text-5xl md:text-7xl font-bold mb-6 animate-glow">
             <span className="text-cyan-400">Roc</span>
             <span className="text-pink-500">Ticket</span>
-            <span className="text-orange-400">NY</span>
-            <span className="text-6xl md:text-7xl ml-4">🎟️</span>
+            <span className="text-cyan-400">NY</span>
+            <span className="text-4xl md:text-5xl ml-3">🎟️</span>
           </h1>
         </div>
 
         {/* Headline */}
-        <div className="mb-8">
-          <h2 className="text-4xl md:text-6xl font-bold text-white mb-4">
+        <div className="mb-12">
+          <h2 className="text-3xl md:text-5xl font-bold text-white mb-6">
             Your Night Out <span className="text-pink-500">Starts Here</span>
           </h2>
-          <p className="text-xl md:text-2xl text-slate-300 max-w-4xl mx-auto leading-relaxed">
+          <p className="text-lg md:text-xl text-slate-300 max-w-4xl mx-auto leading-relaxed">
             Discover Rochester's hottest nightlife events, book tickets to exclusive bars and nightclubs, and unlock exclusive drink deals in the ROC.
           </p>
         </div>
