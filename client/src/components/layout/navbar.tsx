@@ -16,7 +16,7 @@ export function Navbar() {
             <span className="text-2xl font-bold">
               <span className="text-cyan-400">Roc</span>
               <span className="text-pink-500">Ticket</span>
-              <span className="text-orange-400">NY</span>
+              <span className="text-cyan-400">NY</span>
             </span>
             <span className="text-2xl">🎟️</span>
           </Link>
