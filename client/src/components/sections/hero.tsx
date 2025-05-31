@@ -46,7 +46,7 @@ export function Hero({ onSearch }: HeroProps) {
         </div>
 
         {/* Search Bar */}
-        <div className="max-w-4xl mx-auto bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20">
+        <div className="max-w-4xl mx-auto bg-white/10 backdrop-blur-md rounded-2xl p-6">
           <div className="flex flex-col md:flex-row gap-4">
             <div className="flex-1 relative">
               <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-slate-400 h-5 w-5" />
