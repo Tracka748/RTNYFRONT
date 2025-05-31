@@ -1,0 +1,102 @@
+Build a modern, mobile-responsive, nightlife-themed event booking landing page called "RocTicketNY".
+
+### NAVBAR:
+- Dark background with colorful RocTicketNY logo (multi-color "Roc", "Ticket", and "NY" + ticket emoji 🎟️)
+- Navigation links: [Events, Venues, Deals, Sweepstakes]
+- Right-aligned buttons: [Login], [Sign Up] (Sign Up is bright pink button)
+
+---
+
+### HERO SECTION:
+- Gradient dark-to-purple background with large title:
+  - "RocTicketNY" (colorful, bold)
+  - Subheadline: "Your Night Out Starts Here" (with "Starts Here" in pink)
+- Supporting text: "Discover Rochester’s hottest nightlife events, book tickets to exclusive bars and nightclubs, and unlock exclusive drink deals in the ROC."
+- Search bar:
+  - Input field for events/artists/venues
+  - Dropdown for categories
+  - "Search" button (rounded with gradient)
+
+---
+
+### DROPDOWN CATEGORIES (below search bar dropdown):
+Include options:
+- 🏆 VIP Room
+- 🔥 Hot Tickets
+- 🌙 Events Tonight
+- 🥃 Drink Deals
+- 📋 Guest List
+- 📅 Calendar
+- 📍 Venues
+
+---
+
+### ANNOUNCEMENT BANNER:
+- Dark blue card with confetti emoji 🎉
+- Title: "GRAND OPENING WEEKEND"
+- Subtitle: "Join us for Rochester's biggest nightlife celebration!"
+- Description: "Special drink deals, exclusive events, and VIP access to the hottest venues in the ROC."
+
+---
+
+### FEATURED BUTTON GRID:
+Header: "Explore Rochester Nightlife"
+Buttons in vibrant color blocks:
+- VIP Room
+- Events Tonight
+- Drink Deals
+- Guest List
+- Venues
+- Calendar
+
+Each button has a glowing hover effect and emoji icon.
+
+---
+
+### EVENT CAROUSELS:
+
+1. 🔥 Hot Tickets
+  - Event cards showing:
+    - Image
+    - Event name, venue
+    - Date/time
+    - Price
+    - "Buy Now" button
+
+2. 🌙 Events Tonight
+  - Similar card layout, but shows slashed original prices
+  - “Featured” tags
+  - "Buy Tickets" buttons
+
+---
+
+### DRINK DEALS SECTION:
+Title: "Exclusive Drink Deals"
+3-card layout with black background + yellow border and yellow “Claim Deal” buttons.
+Deals:
+- Happy Hour Specials
+- RTNY Member Exclusive
+- Weekend Special
+
+Each card has a brief 1-line description.
+
+---
+
+### POPULAR VENUES SECTION:
+Header: "Popular Venues"
+Cards for venues:
+- Venue image
+- Venue name + location
+- Upcoming Events (listed as bullet points)
+- Capacity info
+- One card features "DJ performing live"
+
+---
+
+### CTA SECTION:
+Gradient background
+Text: “Join RTNY Today 🎟️”
+Description: “Get exclusive access to Rochester’s best nightlife events and member-only drink deals.”
+Buttons:
+- "Sign Up Free"
+- "Browse Events"
