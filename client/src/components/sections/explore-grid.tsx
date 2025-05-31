@@ -60,18 +60,18 @@ export function ExploreGrid({ onCategoryClick }: ExploreGridProps) {
           </h2>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6 max-w-6xl mx-auto">
+        <div className="flex justify-center gap-2 flex-wrap max-w-4xl mx-auto">
           {categories.map((category) => (
-            <div key={category.id} className="flex flex-col items-center">
+            <div key={category.id} className="flex flex-col items-center w-32">
               <Button
                 onClick={() => onCategoryClick?.(category.id)}
-                className={`bg-gradient-to-br ${category.gradient} p-8 rounded-2xl hover:shadow-xl hover:scale-105 transition-all duration-300 glow-hover group h-32 w-32 mb-4 flex items-center justify-center`}
+                className={`bg-gradient-to-br ${category.gradient} p-3 rounded-xl hover:shadow-xl hover:scale-105 transition-all duration-300 glow-hover group h-14 w-24 mb-2 flex items-center justify-center`}
               >
-                <div className="text-5xl group-hover:animate-pulse text-white">{category.icon}</div>
+                <div className="text-xl group-hover:animate-pulse text-white">{category.icon}</div>
               </Button>
               <div className="text-center">
-                <h3 className="font-bold text-white text-lg mb-1">{category.name}</h3>
-                <p className="text-slate-400 text-sm">{category.description}</p>
+                <h3 className="font-semibold text-white text-sm mb-1">{category.name}</h3>
+                <p className="text-slate-400 text-xs leading-tight">{category.description}</p>
               </div>
             </div>
           ))}
