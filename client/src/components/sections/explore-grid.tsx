@@ -74,10 +74,10 @@ export function ExploreGrid({ onCategoryClick }: ExploreGridProps) {
                 {category.icon === "Users" && <Users className="h-10 w-10 text-white group-hover:animate-pulse mb-2" />}
                 {category.icon === "MapPin" && <MapPin className="h-10 w-10 text-white group-hover:animate-pulse mb-2" />}
                 {category.icon === "Calendar" && <Calendar className="h-10 w-10 text-white group-hover:animate-pulse mb-2" />}
-                <span className="text-white text-xs font-semibold text-center leading-tight">{category.name}</span>
+                <span className="text-white text-sm font-bold text-center leading-tight">{category.name}</span>
               </Button>
               <div className="text-center">
-                <p className="text-slate-400 text-xs leading-tight">{category.description}</p>
+                <p className="text-slate-400 text-sm leading-tight">{category.description}</p>
               </div>
             </div>
           ))}
