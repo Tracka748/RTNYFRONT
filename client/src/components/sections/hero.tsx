@@ -27,7 +27,7 @@ export function Hero({ onSearch }: HeroProps) {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
         {/* Main Logo */}
         <div className="mb-8">
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 animate-glow">
+          <h1 className="text-5xl md:text-7xl font-bold mb-6">
             <span className="text-cyan-400">Roc</span>
             <span className="text-pink-500">Ticket</span>
             <span className="text-cyan-400">NY</span>
