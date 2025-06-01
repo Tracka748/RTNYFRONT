@@ -9,6 +9,7 @@ import { HotTickets } from "@/components/sections/hot-tickets";
 import { EventsTonight } from "@/components/sections/events-tonight";
 import { DrinkDeals } from "@/components/sections/drink-deals";
 import { FeaturedEvents } from "@/components/sections/featured-events";
+import { PromoterSpotlight } from "@/components/sections/promoter-spotlight";
 import { PopularVenues } from "@/components/sections/popular-venues";
 import { CTASection } from "@/components/sections/cta-section";
 import { api } from "@/lib/api";
@@ -90,6 +91,20 @@ export default function Home() {
     }
   };
 
+  const handleViewEvents = (promoterId: number) => {
+    toast({
+      title: "Promoter Events",
+      description: `Viewing events by promoter ID ${promoterId}`,
+    });
+  };
+
+  const handleFollow = (promoterId: number) => {
+    toast({
+      title: "Following Promoter",
+      description: "You are now following this promoter!",
+    });
+  };
+
   const handleSignUp = () => {
     toast({
       title: "Sign Up",
@@ -114,6 +129,7 @@ export default function Home() {
         <Hero onSearch={handleSearch} />
         <AnnouncementBanner />
         <ExploreGrid onCategoryClick={handleCategoryClick} />
+        <PromoterSpotlight onViewEvents={handleViewEvents} onFollow={handleFollow} />
         <HotTickets onBuyTicket={handleBuyTicket} />
         <EventsTonight onBuyTicket={handleBuyTicket} />
         <DrinkDeals onClaimDeal={handleClaimDeal} />

@@ -32,6 +32,9 @@ export function Navbar() {
             <Link href="#deals" className="text-slate-300 hover:text-cyan-400 transition-colors">
               Deals
             </Link>
+            <Link href="/promoter" className="text-slate-300 hover:text-cyan-400 transition-colors">
+              Promoter (Beta)
+            </Link>
             <Link href="#sweepstakes" className="text-slate-300 hover:text-cyan-400 transition-colors">
               Sweepstakes
             </Link>
@@ -76,6 +79,13 @@ export function Navbar() {
                   onClick={() => setIsOpen(false)}
                 >
                   Deals
+                </Link>
+                <Link
+                  href="/promoter"
+                  className="text-slate-300 hover:text-cyan-400 transition-colors py-2"
+                  onClick={() => setIsOpen(false)}
+                >
+                  Promoter (Beta)
                 </Link>
                 <Link
                   href="#sweepstakes"
