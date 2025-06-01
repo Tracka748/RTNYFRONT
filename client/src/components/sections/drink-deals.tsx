@@ -67,13 +67,13 @@ export function DrinkDeals({ onClaimDeal }: DrinkDealsProps) {
         </div>
 
         {isLoading ? (
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
             {[...Array(3)].map((_, i) => (
               <div key={i} className="bg-black border-2 border-yellow-500 rounded-2xl p-6 h-48 animate-pulse" />
             ))}
           </div>
         ) : (
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
             {deals.length === 0 ? (
               <div className="col-span-full text-center py-12">
                 <p className="text-slate-400">No active drink deals available at this time.</p>
