@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
-import { Menu } from "lucide-react";
+import { Menu, Sparkles } from "lucide-react";
 
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -32,8 +32,9 @@ export function Navbar() {
             <Link href="#deals" className="text-slate-300 hover:text-cyan-400 transition-colors">
               Deals
             </Link>
-            <Link href="/promoter" className="text-slate-300 hover:text-cyan-400 transition-colors">
-              Promoter (Beta)
+            <Link href="/promoter" className="text-slate-300 hover:text-cyan-400 transition-colors flex items-center gap-2">
+              Promoters
+              <Sparkles className="h-3 w-3 text-yellow-400" />
             </Link>
             <Link href="#sweepstakes" className="text-slate-300 hover:text-cyan-400 transition-colors">
               Sweepstakes
@@ -82,10 +83,11 @@ export function Navbar() {
                 </Link>
                 <Link
                   href="/promoter"
-                  className="text-slate-300 hover:text-cyan-400 transition-colors py-2"
+                  className="text-slate-300 hover:text-cyan-400 transition-colors py-2 flex items-center gap-2"
                   onClick={() => setIsOpen(false)}
                 >
-                  Promoter (Beta)
+                  Promoters
+                  <Sparkles className="h-3 w-3 text-yellow-400" />
                 </Link>
                 <Link
                   href="#sweepstakes"
