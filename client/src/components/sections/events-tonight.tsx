@@ -68,8 +68,10 @@ export function EventsTonight({ onBuyTicket }: EventsTonightProps) {
   }
 
   return (
-    <section className="bg-slate-900 py-16">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="bg-slate-900 py-20 relative overflow-hidden">
+      <div className="absolute inset-0 bg-gradient-to-br from-purple-900/10 via-transparent to-blue-900/10"></div>
+      <div className="absolute inset-0 opacity-5 bg-[url('https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=1920&h=1080&fit=crop')] bg-cover bg-center"></div>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="flex justify-between items-center mb-8">
           <h2 className="text-3xl md:text-4xl font-bold text-white flex items-center">
             <span className="text-purple-400 mr-3">🌙</span> Events Tonight

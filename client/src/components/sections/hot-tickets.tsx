@@ -84,8 +84,9 @@ export function HotTickets({ onBuyTicket }: HotTicketsProps) {
   }
 
   return (
-    <section className="bg-slate-800 py-16" id="events">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section className="bg-gradient-to-r from-slate-800 via-red-900/20 to-slate-800 py-20 relative overflow-hidden" id="events">
+      <div className="absolute inset-0 bg-gradient-to-br from-red-500/5 to-orange-500/5"></div>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="flex justify-between items-center mb-8">
           <h2 className="text-3xl md:text-4xl font-bold text-white flex items-center">
             <span className="text-orange-500 mr-3">🔥</span> Hot Tickets

@@ -99,8 +99,9 @@ export function PromoterSpotlight({ onViewEvents, onFollow }: PromoterSpotlightP
                   />
                 </div>
                 {/* Live indicator */}
-                <div className="absolute -top-2 -right-2 bg-red-500 text-white text-xs font-bold px-3 py-1 rounded-full animate-pulse">
-                  LIVE
+                <div className="absolute -top-2 -right-2 bg-red-500 text-white text-xs font-bold px-3 py-1 rounded-full animate-pulse shadow-lg shadow-red-500/50">
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-red-400 opacity-75"></span>
+                  <span className="relative">LIVE</span>
                 </div>
               </div>
 

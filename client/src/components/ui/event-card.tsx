@@ -38,25 +38,25 @@ export function EventCard({ event, onBuyTicket, showOriginalPrice = false }: Eve
   };
 
   return (
-    <div className="min-w-[300px] bg-slate-700 rounded-2xl overflow-hidden glow-hover group">
+    <div className="min-w-[300px] bg-slate-700/80 backdrop-blur-sm rounded-2xl overflow-hidden hover:bg-slate-600/80 hover:shadow-2xl hover:shadow-cyan-500/20 transition-all duration-300 transform hover:scale-105 group border border-slate-600/50 hover:border-cyan-400/30">
       {event.imageUrl && (
         <div className="relative">
           <img
             src={event.imageUrl}
             alt={event.name}
-            className="w-full h-48 object-cover"
+            className="w-full h-48 object-cover group-hover:brightness-110 transition-all duration-300"
             onError={(e) => {
               (e.target as HTMLImageElement).style.display = 'none';
             }}
           />
           <div className="absolute top-4 left-4">
-            <Badge className={`${getCategoryColor(event.category)} text-white`}>
+            <Badge className={`${getCategoryColor(event.category)} text-white shadow-lg`}>
               {event.category}
             </Badge>
           </div>
           {event.isFeatured && (
             <div className="absolute top-4 right-4">
-              <Badge className="bg-yellow-500 text-black font-semibold">
+              <Badge className="bg-gradient-to-r from-yellow-400 to-orange-500 text-black font-semibold shadow-lg animate-pulse">
                 Featured
               </Badge>
             </div>

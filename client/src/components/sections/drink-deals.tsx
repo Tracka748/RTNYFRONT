@@ -53,14 +53,15 @@ export function DrinkDeals({ onClaimDeal }: DrinkDealsProps) {
   }
 
   return (
-    <section className="bg-slate-800 py-16" id="deals">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center mb-8">
+    <section className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 py-20 relative overflow-hidden" id="deals">
+      <div className="absolute inset-0 bg-gradient-to-r from-cyan-500/5 to-pink-500/5"></div>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="flex justify-between items-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-white flex items-center">
-            <span className="text-yellow-500 mr-3">🥃</span> Exclusive{" "}
-            <span className="text-yellow-500 ml-2">Drink Deals</span>
+            <span className="text-cyan-400 mr-3">🥃</span> Exclusive{" "}
+            <span className="text-pink-400 ml-2">Drink Deals</span>
           </h2>
-          <Button className="bg-yellow-500 hover:bg-yellow-600 text-black flex items-center font-medium">
+          <Button className="bg-gradient-to-r from-cyan-500 to-pink-500 hover:from-cyan-600 hover:to-pink-600 text-white flex items-center font-medium rounded-xl px-6 py-3">
             View All Deals <ArrowRight className="ml-2 h-4 w-4" />
           </Button>
         </div>

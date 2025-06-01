@@ -53,7 +53,7 @@ const categories: CategoryItem[] = [
 
 export function ExploreGrid({ onCategoryClick }: ExploreGridProps) {
   return (
-    <section className="bg-slate-900 py-16">
+    <section className="bg-slate-900 py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
@@ -61,19 +61,19 @@ export function ExploreGrid({ onCategoryClick }: ExploreGridProps) {
           </h2>
         </div>
 
-        <div className="flex justify-center gap-6 flex-wrap max-w-6xl mx-auto">
+        <div className="flex justify-center gap-8 flex-wrap max-w-7xl mx-auto">
           {categories.map((category) => (
-            <div key={category.id} className="flex flex-col items-center min-w-[140px]">
+            <div key={category.id} className="flex flex-col items-center min-w-[160px]">
               <Button
                 onClick={() => onCategoryClick?.(category.id)}
-                className={`bg-gradient-to-br ${category.gradient} p-6 rounded-3xl hover:shadow-2xl hover:scale-105 transition-all duration-300 glow-hover group h-32 w-36 mb-4 flex flex-col items-center justify-center`}
+                className={`bg-gradient-to-br ${category.gradient} p-8 rounded-3xl hover:shadow-2xl hover:scale-105 transition-all duration-300 glow-hover group h-40 w-44 mb-6 flex flex-col items-center justify-center`}
               >
-                {category.icon === "Crown" && <Crown className="h-10 w-10 text-white group-hover:animate-pulse mb-2" />}
-                {category.icon === "Zap" && <Zap className="h-10 w-10 text-white group-hover:animate-pulse mb-2" />}
-                {category.icon === "Wine" && <Wine className="h-10 w-10 text-white group-hover:animate-pulse mb-2" />}
-                {category.icon === "Users" && <Users className="h-10 w-10 text-white group-hover:animate-pulse mb-2" />}
-                {category.icon === "MapPin" && <MapPin className="h-10 w-10 text-white group-hover:animate-pulse mb-2" />}
-                {category.icon === "Calendar" && <Calendar className="h-10 w-10 text-white group-hover:animate-pulse mb-2" />}
+                {category.icon === "Crown" && <Crown className="h-12 w-12 text-white group-hover:animate-pulse mb-3" />}
+                {category.icon === "Zap" && <Zap className="h-12 w-12 text-white group-hover:animate-pulse mb-3" />}
+                {category.icon === "Wine" && <Wine className="h-12 w-12 text-white group-hover:animate-pulse mb-3" />}
+                {category.icon === "Users" && <Users className="h-12 w-12 text-white group-hover:animate-pulse mb-3" />}
+                {category.icon === "MapPin" && <MapPin className="h-12 w-12 text-white group-hover:animate-pulse mb-3" />}
+                {category.icon === "Calendar" && <Calendar className="h-12 w-12 text-white group-hover:animate-pulse mb-3" />}
                 <span className="text-white text-sm font-bold text-center leading-tight">{category.name}</span>
               </Button>
               <div className="text-center">
