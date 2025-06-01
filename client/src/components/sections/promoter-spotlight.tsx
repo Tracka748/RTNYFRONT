@@ -74,7 +74,9 @@ export function PromoterSpotlight({ onViewEvents, onFollow }: PromoterSpotlightP
   const currentPromoter = promoters[currentIndex];
 
   return (
-    <section className="bg-gradient-to-r from-slate-900 via-purple-900/20 to-slate-900 py-16">
+    <section className="bg-gradient-to-r from-slate-900 via-purple-900/20 to-slate-900 py-20 mt-8 mb-8 relative">
+      <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-cyan-400/50 to-transparent"></div>
+      <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-pink-400/50 to-transparent"></div>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
